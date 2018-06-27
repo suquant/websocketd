@@ -8,8 +8,10 @@ Websocketd docker image
 #!/bin/bash
 # count.sh
 
-for ((COUNT = 1; COUNT <= 10; COUNT++)); do
-  echo $COUNT
+COUNT=${COUNT:-10}
+
+for n in $(seq 1 $COUNT); do
+  echo $n
   sleep 1
 done
 ```
